@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit form</title>
+</head>
+<body>
+    <h2>student edit form</h2><br>
+     <form action="" method="post">
+        {% csrf_token %}
+        {% for i in forms %}
+        <label>student id</label> <input type="text"  name="student_id" placeholder="{{i.student_id}}"><br>
+        <label>name</label> <input type="text" name="name" placeholder="{{i.name}}"><br>
+        <label>email</label> <input type="text" name="email" placeholder="{{i.email}}"><br>
+        <label>phone number</label> <input type="text" name="phone" placeholder="{{i.phone}}"><br>
+        <input type="submit" value="edit">
+        {% endfor %}
+    </form>
+</body>
+</html>
